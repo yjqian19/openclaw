@@ -4,7 +4,6 @@ services:
     runtime: docker
     plan: starter
     dockerCommand: node dist/index.js gateway --allow-unconfigured --port $PORT --bind lan
-    healthCheckPath: /health
     envVars:
       - key: PORT
         value: "8080"
