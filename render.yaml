@@ -3,7 +3,7 @@ services:
     name: openclaw
     runtime: docker
     plan: starter
-    dockerCommand: /bin/sh -c "node dist/index.js gateway --allow-unconfigured --port $PORT --bind 0.0.0.0"
+    dockerCommand: /bin/sh -c "/usr/local/bin/node dist/index.js gateway --allow-unconfigured --port $PORT --bind 0.0.0.0"
     healthCheckPath: /health
     envVars:
       - key: PORT
